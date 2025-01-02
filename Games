@@ -1,0 +1,134 @@
+def kbc():
+    questions = [
+        {
+            "question": "What is the capital of France?",
+            "A": "Paris",
+            "B": "London",
+            "C": "Berlin",
+            "D": "Tokyo",
+            "answer": "A",
+            "prize": 1
+        },
+        {
+            "question": "What is the capital of Germany?",
+            "A": "Berlin",
+            "B": "Munich",
+            "C": "Hamburg",
+            "D": "Frankfurt",
+            "answer": "A",
+            "prize": 1
+        },
+        
+    {
+        "question": "What is the capital of India?",
+        "A": "New Delhi",
+        "B": "Mumbai",
+        "C": "Kolkata",
+        "D": "Chennai",
+        "answer": "A",
+        "prize": 1
+    },
+    {
+        "question": "Which is the largest planet in our Solar System?",
+        "A": "Earth",
+        "B": "Jupiter",
+        "C": "Saturn",
+        "D": "Mars",
+        "answer": "B",
+        "prize": 1
+    },
+    {
+        "question": "Who wrote 'Romeo and Juliet'?",
+        "A": "William Shakespeare",
+        "B": "Charles Dickens",
+        "C": "Jane Austen",
+        "D": "Mark Twain",
+        "answer": "A",
+        "prize": 1
+    },
+    {
+        "question": "Which ocean is the largest in the world?",
+        "A": "Atlantic Ocean",
+        "B": "Indian Ocean",
+        "C": "Arctic Ocean",
+        "D": "Pacific Ocean",
+        "answer": "D",
+        "prize": 1
+    },
+    {
+        "question": "What is the chemical symbol for water?",
+        "A": "O2",
+        "B": "H2O",
+        "C": "CO2",
+        "D": "H2",
+        "answer": "B",
+        "prize": 1
+    },
+    {
+        "question": "Which country is known as the Land of the Rising Sun?",
+        "A": "China",
+        "B": "Japan",
+        "C": "South Korea",
+        "D": "Thailand",
+        "answer": "B",
+        "prize": 1
+    },
+    {
+        "question": "What is the square root of 64?",
+        "A": "6",
+        "B": "7",
+        "C": "8",
+        "D": "9",
+        "answer": "C",
+        "prize": 1
+    },
+    {
+        "question": "Who painted the Mona Lisa?",
+        "A": "Vincent van Gogh",
+        "B": "Pablo Picasso",
+        "C": "Leonardo da Vinci",
+        "D": "Claude Monet",
+        "answer": "C",
+        "prize": 1
+    },
+    {
+        "question": "Which element has the chemical symbol 'O'?",
+        "A": "Oxygen",
+        "B": "Gold",
+        "C": "Silver",
+        "D": "Iron",
+        "answer": "A",
+        "prize": 1
+    },
+    {
+        "question": "What is the tallest mountain in the world?",
+        "A": "K2",
+        "B": "Kangchenjunga",
+        "C": "Mount Everest",
+        "D": "Lhotse",
+        "answer": "C",
+        "prize": 1
+    }
+
+    ]
+    total_amount = 0
+
+    print("Welcome to KBC Veer Vision! Let's play the game!")
+
+    for idx, q in enumerate(questions):
+        print(f"Question {idx+1}: {q['question']}")
+        for option in ["A", "B", "C", "D"]:
+            print(f"{option}: {q[option]}")
+        user_answer = input("Enter your Answer (A/B/C/D): ").strip().upper()
+
+        if user_answer == q["answer"]:
+            print(f"Correct Answer! You won Rs.{q['prize']}.")
+            total_amount += q["prize"]
+        else:
+            print("Wrong Answer! Game Over.")
+            break
+
+    print(f"\nThank You for playing! You've taken home Rs. {total_amount}.")
+
+if __name__ == "__main__":
+    kbc()
